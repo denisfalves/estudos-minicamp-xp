@@ -1,0 +1,25 @@
+<html>
+    <script>
+        //Dica: crie uma função que recebe um número como parâmetro e dentro dela crie uma estruturade repetição que verifique se existe algum número menor que o parâmetro e maior que 1 que sejadivisível pelo parâmetro. Se encontrar algum, quer dizer que o número em questão não é primo.Se não encontrar, quer dizer que o número é primo.
+      
+     function verificaNumeroPrimo(numero) {
+        var divisores = 0;
+        var resultado;
+
+        for (i = 1; i <= numero; i++) {
+            if (numero % i == 0) {
+            divisores++
+            }
+        }
+    
+
+        if (divisores == 2) {
+            return resultado = 'O número ' + numero + ' é primo'
+        } else {
+            return resultado = 'O número ' + numero + ' não é primo'
+        }
+
+        console.log(resultado);
+    }
+    </script>
+</html>
