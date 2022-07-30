@@ -1,0 +1,70 @@
+<html>
+    <script>
+     //Se listarmos todos os números naturais menores que 10 e que são multiplos de 3 e 5, obtemos 3, 5 , 6 e 9. Asoma desses múltiplos é 23. Encontre a soma de todos os múltiplos de 3 ou 5 abaixo de 100
+     
+     //Resposta correta: 233168
+
+     //1- Criar uma função que verifica se um numero é divisível por 3 ou 5
+     //2- Fazer um loop de 3 até 999 verificando quais números são divisiveis por 3 e 5
+     //3- Somar os números encontrados no passo 2.
+
+    function verificaDivisivel(numero) {
+        //true: o numero é divisivel por 3 ou 5
+        //false: o numero não é divisivel por 3 ou 5
+        if (numero % 3 === 0 || numero % 5 === 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+
+    function somaMultiplos3e5() {
+    var soma = 0;
+    var lista = [];
+    
+    //3, 4, 5, 6, 7, 8, 9, 10, 11 ... 997, 998, 999
+    for (var i = 3; i <= 999; i++) {
+        if (verificaDivisivel(i)) {
+            soma = soma + i;
+        }
+    
+    }
+
+        console.log(soma);
+
+    //se a questão pedisse para armazenar em uma lista:
+   /*for (var i = 3; i <= 999; i++) {
+        if (verificaDivisivel(i)) {
+            soma = soma + i;
+            lista.push(i);
+        }
+    
+    }*/
+
+    //usando o while seria:
+    var i = 3;
+    while (i <= 999) {
+        (verificaDivisivel(i)) {
+            soma = soma + i;
+            lista.push(i);
+        }
+        i++;
+    }
+
+    return soma;
+
+    //se a questão pedisse para percorrer uma lista:
+    // 0 1 2 3 4 
+    //[5, 7, 8, 4, 9]
+    //lista.length = 5
+
+    for (var i = 0; i < lista.length; i++) {
+        console.log(lista[i]);
+    }
+
+    return soma 
+
+    }
+    </script>
+</html>
